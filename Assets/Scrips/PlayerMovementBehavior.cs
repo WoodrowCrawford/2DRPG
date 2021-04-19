@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovementBehavior : MonoBehaviour
 {
-    Rigidbody Player;
+    private Rigidbody _rigidbody;
 
 
     [SerializeField]
@@ -16,14 +16,17 @@ public class PlayerMovementBehavior : MonoBehaviour
     private float _damage;
 
     [SerializeField]
-
     //How much mama the player has
     private float _mana;
+
+    [SerializeField]
+    //How fast the player can move  
+    private float _speed;
 
    
     void Start()
     {
-   
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame

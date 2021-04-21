@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementBehavior : MonoBehaviour
+public class PlayerBehavior : MonoBehaviour
 {
     private Rigidbody _rigidbody;
 
@@ -19,9 +19,7 @@ public class PlayerMovementBehavior : MonoBehaviour
     //How much mama the player has
     private float _mana;
 
-    [SerializeField]
-    //How fast the player can move  
-    private float _speed;
+  
 
    
     void Start()

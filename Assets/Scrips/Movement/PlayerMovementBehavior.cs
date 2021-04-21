@@ -9,23 +9,32 @@ public class PlayerMovementBehavior : MonoBehaviour
     [SerializeField]
     private float _moveSpeed = 5.0f;
 
-
+    private Camera _camera;
     private Rigidbody _rigidbody;
 
-    Vector3 mousePosition;
-    Vector2 position = new Vector2(0f, 0f);
+
+    [SerializeField]
+    //The distace the player will be from the mouse
+    private float _distance = 20.0f;
 
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition.z = _distance;
+        transform.position = Camera.main.ScreenToWorldPoint(mousePosition);
 
     }
+
+
+
 
 }
 

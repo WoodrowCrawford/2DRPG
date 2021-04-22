@@ -16,17 +16,19 @@ public class EnemyAttackBehavior : MonoBehaviour
 
     private EnemyMovementBehavior _movement;
 
+    
+
     private void Awake()
     {
         _movement = GetComponent<EnemyMovementBehavior>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision other)
     {
-        if (!collision.gameObject != _movement.gameObject)
+        if (!other.gameObject != _movement.gameObject)
             return;
 
-        HealthBehavior health = collision.gameObject.GetComponent<HealthBehavior>();
+        HealthBehavior health = other.gameObject.GetComponent<HealthBehavior>();
 
         if (health)
             health.TakeDamage(_damage);

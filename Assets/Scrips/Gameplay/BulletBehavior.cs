@@ -8,6 +8,8 @@ public class BulletBehavior : MonoBehaviour
 {
     private Rigidbody _rigidbody;
 
+    private EnemyMovementBehavior enemy;
+
     [SerializeField]
     //How much damage the bullet will do
     private float _damage;
@@ -43,10 +45,10 @@ public class BulletBehavior : MonoBehaviour
         Destroy(gameObject, _despawnTime);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider enemy)
     {
         //Get the health behavior attached to the object
-        HealthBehavior health = other.GetComponent<HealthBehavior>();
+        HealthBehavior health = enemy.GetComponent<HealthBehavior>();
 
         //If the health value is not null, deal damage
         if (health)

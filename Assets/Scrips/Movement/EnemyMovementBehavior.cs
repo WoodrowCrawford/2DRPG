@@ -11,6 +11,11 @@ public class EnemyMovementBehavior : MonoBehaviour
     [SerializeField]
     private GameObject _target;
 
+    [SerializeField]
+    //The amount of time it takes for the enemy to disappear
+    private float _despawnTime;
+
+
     public GameObject Target
     {
         get
@@ -25,6 +30,7 @@ public class EnemyMovementBehavior : MonoBehaviour
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        Destroy(gameObject, _despawnTime);
     }
 
 

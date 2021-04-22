@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthBehavior : MonoBehaviour
 {
     [SerializeField]
-    //The player health
+    //The health for the object
     private float _health;
 
     [SerializeField]

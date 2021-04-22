@@ -14,24 +14,16 @@ public class EnemyBehavior : MonoBehaviour
 
     [SerializeField]
     //The total amount of damage that the enemy deals
-    private float _damage = 2;
 
-
-    [SerializeField]
-
-    private EnemyMovementBehavior _movement;
-
-    private void OnCollisionEnter(Collision collision)
+    // Start is called before the first frame update
+    void Start()
     {
-        //If the target isn't the target return
-        if (collision.gameObject != _movement.Target)
-            return;
+        
+    }
 
-        //Get a reference to the attached health script
-        HealthBehaviour health = collision.gameObject.GetComponent<HealthBehaviour>();
-
-        //If the health isn't null, deal damage
-        if (health)
-            health.TakeDamage(_damage);
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }

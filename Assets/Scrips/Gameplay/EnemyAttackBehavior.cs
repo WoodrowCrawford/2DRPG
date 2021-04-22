@@ -9,21 +9,25 @@ public class EnemyBehavior : MonoBehaviour
     private float _health = 2.0f;
 
     [SerializeField]
+    //The total amount of damage that the enemy deals
+    private float _damage = 2.0f;
+
+    [SerializeField]
     //The score that the player recieves when defeating the enemy
     public float _scoreDropped = 1.0f;
 
-    [SerializeField]
-    //The total amount of damage that the enemy deals
+    private EnemyMovementBehavior _movement;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        _movement = GetComponent<EnemyMovementBehavior>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if (!collision.gameObject)
+            return;
+
+       
     }
 }

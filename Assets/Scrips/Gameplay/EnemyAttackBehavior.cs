@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBehavior : MonoBehaviour
+public class EnemyAttackBehavior : MonoBehaviour
 {
-    [SerializeField]
-    //The enemy health
-    private float _health = 2.0f;
-
+ 
     [SerializeField]
     //The total amount of damage that the enemy deals
     private float _damage = 2.0f;
+
 
     [SerializeField]
     //The score that the player recieves when defeating the enemy
@@ -25,9 +23,13 @@ public class EnemyBehavior : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!collision.gameObject)
+        if (!collision.gameObject != _movement.gameObject)
             return;
 
+        HealthBehavior health = collision.gameObject.GetComponent<HealthBehavior>();
+
+        if (health)
+            health.TakeDamage(_damage);
        
     }
 }

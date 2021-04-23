@@ -9,11 +9,7 @@ public class EnemyAttackBehavior : MonoBehaviour
     //The total amount of damage that the enemy deals
     private float _damage = 2.0f;
 
-
-    [SerializeField]
-    //The score that the player recieves when defeating the enemy
-    public float _scoreDropped = 1.0f;
-
+    //Gets a reference to the enemy movement behavior
     private EnemyMovementBehavior _movement;
 
     
@@ -23,6 +19,7 @@ public class EnemyAttackBehavior : MonoBehaviour
         _movement = GetComponent<EnemyMovementBehavior>();
     }
 
+    //What happens when the object touches the player
     private void OnCollisionEnter(Collision other)
     {
         if (!other.gameObject != _movement.gameObject)

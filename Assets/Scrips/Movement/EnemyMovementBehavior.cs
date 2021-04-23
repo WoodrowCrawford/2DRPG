@@ -9,13 +9,14 @@ public class EnemyMovementBehavior : MonoBehaviour
     private Rigidbody _rigidbody;
 
     [SerializeField]
+    //Sets a target for the enemy
     private GameObject _target;
 
     [SerializeField]
     //The amount of time it takes for the enemy to disappear
     private float _despawnTime;
 
-
+    //Returns a value for the target
     public GameObject Target
     {
         get

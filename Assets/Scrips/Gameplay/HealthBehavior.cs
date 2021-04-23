@@ -9,9 +9,11 @@ public class HealthBehavior : MonoBehaviour
     private float _health;
 
     [SerializeField]
+    //This is used to see if the object should be removed on death or not
     private bool _removeOnDeath = true;
 
 
+    //Returns a normal value for health
     public float Health
     {
         get
@@ -20,6 +22,7 @@ public class HealthBehavior : MonoBehaviour
         }
     }
 
+    //Damage function for the object
     public void TakeDamage(float damage)
     {
         _health -= damage;

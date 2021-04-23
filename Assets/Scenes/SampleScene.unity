@@ -745,7 +745,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 60
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 75
     m_Alignment: 3
@@ -775,8 +775,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc81dd424cc81b489a289ab7357aa81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerText: {fileID: 0}
-  _startTime: 0
+  timerText: {fileID: 1270279526}
+  startTime: 0
 --- !u!1 &393547524
 GameObject:
   m_ObjectHideFlags: 0
@@ -3856,7 +3856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 386261462}
-  _startTime: 0
+  startTime: 0
 --- !u!1 &2056343141
 GameObject:
   m_ObjectHideFlags: 0
@@ -4052,8 +4052,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 901293576, guid: 1697fecdd847e1b458c60ce65b51e607, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.505
+      objectReference: {fileID: 0}
     - target: {fileID: 901293577, guid: 1697fecdd847e1b458c60ce65b51e607, type: 3}
       propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 901293577, guid: 1697fecdd847e1b458c60ce65b51e607, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901293580, guid: 1697fecdd847e1b458c60ce65b51e607, type: 3}
@@ -4067,6 +4075,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1609380410, guid: 1697fecdd847e1b458c60ce65b51e607, type: 3}
       propertyPath: _health
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609380416, guid: 1697fecdd847e1b458c60ce65b51e607, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1609380417, guid: 1697fecdd847e1b458c60ce65b51e607, type: 3}
@@ -4160,7 +4172,12 @@ PrefabInstance:
     - target: {fileID: 111732861138512399, guid: 1697fecdd847e1b458c60ce65b51e607,
         type: 3}
       propertyPath: m_Height
-      value: 1.9
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 111732861138512399, guid: 1697fecdd847e1b458c60ce65b51e607,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1697fecdd847e1b458c60ce65b51e607, type: 3}

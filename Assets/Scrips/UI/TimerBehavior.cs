@@ -8,27 +8,29 @@ public class TimerBehavior : MonoBehaviour
 
     [SerializeField]
     //The timer text
+
     public Text timerText;
 
     [SerializeField]
     //Shows how long since the application started
-    private float _startTime;
+    private float startTime;
 
+
+    bool timerActive = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        _startTime = Time.time;
+        timerText.text = startTime.ToString("F2");
     }
 
     // Update is called once per frame
     void Update()
     {
-        float t = Time.time - _startTime;
-
-        string minutes = ((int)t / 60).ToString();
-        string seconds = (t % 60).ToString("f2");
-
-        timerText.text = minutes + ":" + seconds;
+       if (timerActive)
+        {
+            startTime += Time.deltaTime;
+            timerText.text = startTime.ToString("F2");
+        }
     }
 }

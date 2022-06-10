@@ -10,3 +10,7 @@ Use the mouse to move the character and press the left mouse button to shoot!
 # Tips
 Bullets can fall back down and you only have one life. There are no restarts in life.
 That green bar is not a sheild. It is false hope.
+
+# Releases
+PC Version: 
+WebGL Version: https://woodrowcrawford.github.io/2DRPG/Player/

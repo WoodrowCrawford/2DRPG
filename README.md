@@ -12,6 +12,6 @@ Bullets can fall back down and you only have one life. There are no restarts in 
 That green bar is not a sheild. It is false hope.
 
 # Releases
-PC Version: https://github.com/WoodrowCrawford/2DRPG/releases/download/v1.0/2DRPG-v1.0-PC.zip
+PC Version: https://github.com/WoodrowCrawford/2DRPG/releases/download/v1.1/2DRPG-v1.1-PC.zip
 
 WebGL Version: https://woodrowcrawford.github.io/2DRPG/Player/

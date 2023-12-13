@@ -9,7 +9,7 @@ Use the mouse to move the character and press the left mouse button to shoot!
 
 # Tips
 Bullets can fall back down and you only have one life. There are no restarts in life.
-That green bar is not a sheild. It is false hope.
+That green bar is not a shield. It is false hope.
 
 # Releases
 PC Version: https://github.com/WoodrowCrawford/2DRPG/releases/download/v1.1/2DRPG-v1.1-PC.zip
